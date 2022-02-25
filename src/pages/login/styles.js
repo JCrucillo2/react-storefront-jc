@@ -1,52 +1,116 @@
 import styled from "styled-components";
-import { themeColor, lightColor, greyColor } from "../../styles/theme";
+import LoginImage from "./../../assets/darkstar-alternate.png";
 
-const Container = styled.div`
-    padding: 70px 0;
-    text-align: center;
-`;
-
-const MainFlex = styled.div`
+const SplitScreen = styled.div`
     display: flex;
-    max-width: 1600px;
-    margin: 5rem auto;
-    background-color: ${themeColor};
+    flex-direction: column;
+    @media screen and (min-width: 900px) {
+        flex-direction: row;
+        height: 100vh;
+    }
 `;
 
-const InputArea = styled.div`
-    min-width: 368px;
-    padding: 70px 0;
+const SectionCopy = styled.div`
+    color: white;
     text-align: center;
-    border-radius: 5px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: black;
+    text-align: center;
+    h2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+    p {
+        margin: 1.5rem 0;
+        font-size: 0.875rem;
+    }
 `;
 
-const DisplayArea = styled.div`
-    flex-grow: 1;
+const MainHeading = styled.h1`
+    font-size: 2.4rem;
+    font-weight: 700;
+    @media screen and (min-width: 900px) {
+        font-size: 4.8rem;
+    }
+`;
+
+const Left = styled.div`
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)),
+        url(${LoginImage});
+    background-size: cover;
+    @media screen and (min-width: 900px) {
+        display: flex;
+        width: 50%;
+        height: auto;
+    }
+`;
+
+const Right = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+    @media screen and (min-width: 900px) {
+        display: flex;
+        width: 50%;
+        height: auto;
+    }
+`;
+
+const SectionFirst = styled.section`
+    color: white;
+    text-align: center;
+    p {
+        font-weight: 400;
+    }
+`;
+
+const Form = styled.form`
+    width: 328px;
+`;
+
+const InputContainer = styled.div``;
+
+const InputBox = styled.input`
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: 1px solid #c4c4c4;
     padding: 1rem;
-    background-color: ${greyColor};
+    margin-bottom: 1.25rem;
+    font-size: 0.875rem;
 `;
 
-const FormArea = styled.form`
-    color: ${lightColor};
+const InputLabel = styled.label`
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.75rem;
 `;
 
-const FormItem = styled.div`
+const CheckBoxZone = styled.div`
+    display: flex;
     margin-bottom: 1rem;
+    p {
+        padding-left: 0.5rem;
+    }
 `;
-
-const FormLabel = styled.label`
-    width: 100px;
-`;
-
-const FormInput = styled.input``;
 
 export {
-    Container,
-    MainFlex,
-    InputArea,
-    DisplayArea,
-    FormArea,
-    FormItem,
-    FormLabel,
-    FormInput,
+    SplitScreen,
+    Left,
+    Right,
+    MainHeading,
+    SectionFirst,
+    Form,
+    SectionCopy,
+    InputContainer,
+    InputLabel,
+    InputBox,
+    CheckBoxZone,
 };

@@ -1,15 +1,20 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import {
-    Container,
-    MainFlex,
-    InputArea,
-    DisplayArea,
-    FormArea,
-    FormItem,
-    FormLabel,
-    FormInput,
+    SplitScreen,
+    Left,
+    Right,
+    MainHeading,
+    SectionFirst,
+    Form,
+    SectionCopy,
+    InputContainer,
+    InputLabel,
+    InputBox,
+    CheckBoxZone,
 } from "./styles";
+import { Button } from "./../../ui/buttons";
+import { FormCheck } from "react-bootstrap";
 
 // Add Event Listener
 // elem.addEventListener
@@ -45,36 +50,59 @@ function LoginPage(props) {
 
                 <button type="submit">Form Submission</button>
             </form> */}
-            <Container>
-                <MainFlex>
-                    <InputArea>
-                        <FormArea>
-                            <FormItem>
-                                <FormLabel htmlFor="username">
-                                    Username
-                                </FormLabel>
-                                <FormInput
-                                    type="text"
-                                    name="username"
-                                    id="username"
-                                />
-                            </FormItem>
-                            <FormItem>
-                                <FormLabel htmlFor="password">
-                                    Password
-                                </FormLabel>
-                                <input
-                                    type="password"
-                                    name="password"
-                                    id="password"
-                                />
-                            </FormItem>
-                            <button type="submit">Log In</button>
-                        </FormArea>
-                    </InputArea>
-                    <DisplayArea>Some Test LOL</DisplayArea>
-                </MainFlex>
-            </Container>
+            <SplitScreen>
+                <Left>
+                    <SectionFirst>
+                        <MainHeading>JCFigures Dashboard</MainHeading>
+                        <p>
+                            JC Storefront which sells gaming statues and
+                            figurines
+                        </p>
+                    </SectionFirst>
+                </Left>
+                <Right>
+                    <Form>
+                        <SectionCopy>
+                            <h2>Sign In</h2>
+                            <div>
+                                <p>
+                                    Don't have an account?{" "}
+                                    <a href="#">
+                                        <strong>Sign Up</strong>
+                                    </a>
+                                </p>
+                                {/* <Link to="/">Login Page</Link>
+                                <Link to="/dashboard">Dashboard Page</Link> */}
+                            </div>
+                        </SectionCopy>
+
+                        <InputContainer>
+                            <InputLabel htmlFor="username">Username</InputLabel>
+                            <InputBox
+                                type="text"
+                                name="username"
+                                required
+                            ></InputBox>
+                        </InputContainer>
+
+                        <InputContainer>
+                            <InputLabel htmlFor="password">Password</InputLabel>
+                            <InputBox
+                                type="password"
+                                name="password"
+                                required
+                            ></InputBox>
+                        </InputContainer>
+
+                        <CheckBoxZone>
+                            <FormCheck />
+                            <p>Remember Password</p>
+                        </CheckBoxZone>
+
+                        <Button type="submit">Sign In</Button>
+                    </Form>
+                </Right>
+            </SplitScreen>
         </>
     );
 }
