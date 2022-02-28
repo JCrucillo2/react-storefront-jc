@@ -2,6 +2,7 @@ import React from "react";
 
 import { IoNotificationsOutline } from "react-icons/io5";
 import { AppBarStyles, AppBarItems, AppBarItem } from "./styles";
+import { Link } from "react-router-dom";
 
 function AppBar(props) {
     return (
@@ -9,9 +10,9 @@ function AppBar(props) {
             <AppBarItems>
                 <AppBarItem>Branding</AppBarItem>
                 <AppBarItem>
-                    <a>
+                    <Link to="/">
                         <IoNotificationsOutline color="tomato" size="1.75rem" />
-                    </a>
+                    </Link>
                 </AppBarItem>
             </AppBarItems>
         </AppBarStyles>
