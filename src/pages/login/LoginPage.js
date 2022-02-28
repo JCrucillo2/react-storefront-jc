@@ -61,7 +61,7 @@ function LoginPage(props) {
                     </SectionFirst>
                 </Left>
                 <Right>
-                    <Form>
+                    <Form onSubmit={onHandleSubmit}>
                         <SectionCopy>
                             <h2>Sign In</h2>
                             <div>
