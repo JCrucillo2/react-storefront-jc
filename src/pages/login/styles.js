@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import LoginImage from "./../../assets/darkstar-alternate.png";
+import LoginImage from "./../../assets/darkstar-alternate.jpg";
 
 const SplitScreen = styled.div`
     display: flex;

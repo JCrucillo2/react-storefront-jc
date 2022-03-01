@@ -1,5 +1,5 @@
-const themeColor = "#233975";
-const lightColor = "#eeeeee";
-const greyColor = "#f1f1f1";
+const themeColor = "#ff7b00";
+const lightColor = "#ffffff";
+const greyColor = "rgba(0, 0, 0, 0.3)";
 
 export { themeColor, lightColor, greyColor };

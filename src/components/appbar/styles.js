@@ -1,16 +1,36 @@
 import styled from "styled-components";
+import { lightColor, themeColor } from "../../styles/theme";
 
-const AppBarStyles = styled.nav`
-    box-shadow: 0 0 2px 1px grey;
-    padding: 0.5rem 1rem;
+const AppBarContainer = styled.div`
+    padding: 1rem;
+    background-color: ${lightColor};
 `;
 
-const AppBarItems = styled.ul`
+const AppBarItems = styled.div`
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: flex-end;
 `;
 
-const AppBarItem = styled.li``;
+const AppBarContent = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    a:first-child {
+        color: ${themeColor};
+    }
+`;
 
-export { AppBarStyles, AppBarItems, AppBarItem };
+const Email = styled.a``;
+
+const Notifications = styled.a``;
+
+const Settings = styled.a``;
+
+export {
+    AppBarContainer,
+    AppBarItems,
+    AppBarContent,
+    Email,
+    Notifications,
+    Settings,
+};

@@ -15,7 +15,7 @@ const Button = styled.button`
     letter-spacing: 0.5px;
     transition: all 0.2s ease;
     &:hover {
-        background: #2c4893;
+        background: #b95a00;
         cursor: pointer;
     }
 `;

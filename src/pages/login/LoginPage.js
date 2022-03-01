@@ -30,26 +30,6 @@ function LoginPage(props) {
 
     return (
         <>
-            {/* <header>
-                <h1>Login Page Area</h1>
-            </header>
-
-            <nav>
-                <ul>
-                    <li>
-                        <Link to="/">Login Page</Link>
-                    </li>
-                    <li>
-                        <Link to="/dashboard">Dashboard Page</Link>
-                    </li>
-                </ul>
-            </nav>
-
-            <form onSubmit={onHandleSubmit}>
-                <input type="text" name="username" id="username" required />
-
-                <button type="submit">Form Submission</button>
-            </form> */}
             <SplitScreen>
                 <Left>
                     <SectionFirst>

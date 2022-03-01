@@ -1,21 +1,43 @@
 import React from "react";
 
-import { IoNotificationsOutline } from "react-icons/io5";
-import { AppBarStyles, AppBarItems, AppBarItem } from "./styles";
 import { Link } from "react-router-dom";
+import {
+    AppBarContainer,
+    AppBarItems,
+    AppBarContent,
+    Email,
+    Notifications,
+    Settings,
+} from "./styles";
+import { Avatar } from "../../ui/avatar";
+
+// react icons
+import * as MdIcons from "react-icons/md";
+import { IconContext } from "react-icons/lib";
 
 function AppBar(props) {
     return (
-        <AppBarStyles>
-            <AppBarItems>
-                <AppBarItem>Branding</AppBarItem>
-                <AppBarItem>
-                    <Link to="/">
-                        <IoNotificationsOutline color="tomato" size="1.75rem" />
-                    </Link>
-                </AppBarItem>
-            </AppBarItems>
-        </AppBarStyles>
+        <>
+            <IconContext.Provider value={{ size: "25", color: "#ff7b00" }}>
+                <AppBarContainer>
+                    <AppBarItems>
+                        <AppBarContent>
+                            <Link to="/">Sign Out</Link>
+                            <Email href="#">
+                                <MdIcons.MdOutlineEmail />
+                            </Email>
+                            <Notifications href="#">
+                                <MdIcons.MdOutlineNotificationsNone />
+                            </Notifications>
+                            <Avatar href="#">JC</Avatar>
+                            <Settings href="#">
+                                <MdIcons.MdOutlineSettings />
+                            </Settings>
+                        </AppBarContent>
+                    </AppBarItems>
+                </AppBarContainer>
+            </IconContext.Provider>
+        </>
     );
 }
 

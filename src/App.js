@@ -1,6 +1,5 @@
 import { Route, Routes } from "react-router-dom";
 import { DashBoardPage, PageNotFound, LoginPage } from "./pages";
-import "./styles/styles.css";
 
 function App() {
     return (

@@ -1,22 +1,20 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import "../../layout/styles.css";
 
 import { AppBar } from "../../components/appbar";
+import { SideBar } from "../../components/sidebar";
+import { Panels } from "../../components/panels";
 
 function DashBoardPage(props) {
     return (
         <>
-            <nav>
-                <ul>
-                    <li>
-                        <Link to="/">Login Page</Link>
-                    </li>
-                    <li>
-                        <Link to="/dashboard">Dashboard Page</Link>
-                    </li>
-                </ul>
-            </nav>
-            <AppBar />
+            <div className="layout-grid">
+                <SideBar />
+                <div className="content-area">
+                    <AppBar />
+                    <Panels />
+                </div>
+            </div>
         </>
     );
 }
