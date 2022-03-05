@@ -1,1 +1,7 @@
+.layout-grid {
+    display: flex;
+}
 
+.content-area {
+    flex-grow: 1;
+}

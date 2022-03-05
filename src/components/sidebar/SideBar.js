@@ -1,7 +1,15 @@
 import React from "react";
 
+import { SidebarContainer, Logo } from "./styles";
+
 function SideBar() {
-    return <div>SideBar</div>;
+    return (
+        <>
+            <SidebarContainer>
+                <Logo>JCFigures</Logo>
+            </SidebarContainer>
+        </>
+    );
 }
 
 export default SideBar;

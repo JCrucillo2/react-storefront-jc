@@ -1,9 +1,17 @@
 import styled from "styled-components";
 import LoginImage from "./../../assets/darkstar-alternate.jpg";
+import { alternateColor, darkColor, themeColor } from "../../styles/theme";
 
 const SplitScreen = styled.div`
     display: flex;
     flex-direction: column;
+    .Toastify__toast {
+        background-color: ${themeColor};
+        color: ${darkColor};
+    }
+    .Toastify__progress-bar--error {
+        background-color: ${alternateColor};
+    }
     @media screen and (min-width: 900px) {
         flex-direction: row;
         height: 100vh;

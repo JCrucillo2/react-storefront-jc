@@ -1,5 +1,13 @@
-import React from "react";
+import { auth } from "../../libs/firebase";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import {
+    signInWithEmailAndPassword,
+    createUserWithEmailAndPassword,
+} from "firebase/auth";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer, toast } from "react-toastify";
+
 import {
     SplitScreen,
     Left,
@@ -15,22 +23,47 @@ import {
 } from "./styles";
 import { Button } from "./../../ui/buttons";
 import { FormCheck } from "react-bootstrap";
+import * as BiIcons from "react-icons/bi";
 
 // Add Event Listener
 // elem.addEventListener
 
 function LoginPage(props) {
-    let navigation = useNavigate();
+    // console.log(auth);
+
+    let navigator = useNavigate();
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const notify = (error) =>
+        toast.error(error.code, {
+            position: "top-center",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: false,
+            progress: undefined,
+            icon: <BiIcons.BiMessageSquareError />,
+        });
 
     function onHandleSubmit(e) {
         e.preventDefault();
-        navigation("dashboard");
-        // firebase auth signInWithUsernameAndPassword({email, password})
+
+        signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                // move dashboard page
+                // useNavigate() react router
+                navigator("dashboard");
+            })
+            .catch((error) => {
+                notify(error);
+            });
     }
 
     return (
         <>
             <SplitScreen>
+                <ToastContainer />
                 <Left>
                     <SectionFirst>
                         <MainHeading>JCFigures Dashboard</MainHeading>
@@ -57,11 +90,11 @@ function LoginPage(props) {
                         </SectionCopy>
 
                         <InputContainer>
-                            <InputLabel htmlFor="username">Username</InputLabel>
+                            <InputLabel htmlFor="email">Email</InputLabel>
                             <InputBox
                                 type="text"
-                                name="username"
-                                required
+                                placeholder="janedoe@gmail.com"
+                                onChange={(e) => setEmail(e.target.value)}
                             ></InputBox>
                         </InputContainer>
 
@@ -69,8 +102,8 @@ function LoginPage(props) {
                             <InputLabel htmlFor="password">Password</InputLabel>
                             <InputBox
                                 type="password"
-                                name="password"
-                                required
+                                placeholder="password"
+                                onChange={(e) => setPassword(e.target.value)}
                             ></InputBox>
                         </InputContainer>
 

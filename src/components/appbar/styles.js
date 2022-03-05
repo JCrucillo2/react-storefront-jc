@@ -1,9 +1,11 @@
 import styled from "styled-components";
-import { lightColor, themeColor } from "../../styles/theme";
+import { alternateColor, lightColor, themeColor } from "../../styles/theme";
 
 const AppBarContainer = styled.div`
     padding: 1rem;
     background-color: ${lightColor};
+    height: 60px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 `;
 
 const AppBarItems = styled.div`
@@ -16,7 +18,7 @@ const AppBarContent = styled.div`
     align-items: center;
     gap: 16px;
     a:first-child {
-        color: ${themeColor};
+        color: ${alternateColor};
     }
 `;
 
