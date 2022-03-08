@@ -19,4 +19,20 @@ const Logo = styled.h1`
     color: ${lightColor};
 `;
 
-export { SidebarContainer, Logo };
+const SidebarItems = styled.ul`
+    padding: 1rem;
+`;
+
+const SidebarItem = styled.li`
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    a {
+        font-size: 0.875rem;
+        color: ${lightColor};
+    }
+    span {
+        margin-left: 1rem;
+    }
+`;
+
+export { SidebarContainer, Logo, SidebarItems, SidebarItem };
