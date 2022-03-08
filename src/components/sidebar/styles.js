@@ -25,10 +25,19 @@ const SidebarItems = styled.ul`
 
 const SidebarItem = styled.li`
     text-transform: uppercase;
-    margin-bottom: 1rem;
+    margin-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     a {
         font-size: 0.875rem;
         color: ${lightColor};
+        transition: 0.2s;
+        padding: 1rem;
+        display: block;
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+            text-decoration: none;
+        }
     }
     span {
         margin-left: 1rem;

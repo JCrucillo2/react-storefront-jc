@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import { SidebarContainer, Logo, SidebarItems, SidebarItem } from "./styles";
 import * as AiIcons from "react-icons/ai";
+import * as HiIcons from "react-icons/hi";
 import { IconContext } from "react-icons/lib";
 
 function SideBar() {
@@ -21,8 +22,8 @@ function SideBar() {
 
                         <SidebarItem>
                             <Link to="#">
-                                <AiIcons.AiOutlineDashboard />
-                                <span>Dashboard</span>
+                                <HiIcons.HiOutlineDocumentReport />
+                                <span>Reports</span>
                             </Link>
                         </SidebarItem>
                     </SidebarItems>
