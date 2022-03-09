@@ -8,7 +8,7 @@ const Button = styled.button`
     color: white;
     font-weight: 700;
     border: none;
-    padding: 1rem;
+    padding: ${(props) => props.padding || "1rem"};
     border-radius: 8px;
     font-size: 0.75rem;
     text-transform: uppercase;

@@ -1,10 +1,9 @@
 import styled from "styled-components";
-import { themeColor, lightColor } from "../../styles/theme";
+import { themeColor, lightColor, darkColor } from "../../styles/theme";
 
 const SidebarContainer = styled.div`
     width: 260px;
     background-color: ${themeColor};
-    height: 100vh;
 `;
 
 const Logo = styled.h1`
@@ -37,6 +36,7 @@ const SidebarItem = styled.li`
             background-color: rgba(255, 255, 255, 0.3);
             border-radius: 5px;
             text-decoration: none;
+            color: ${darkColor};
         }
     }
     span {

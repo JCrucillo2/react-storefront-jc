@@ -13,7 +13,7 @@ const AppBarItems = styled.div`
     justify-content: flex-end;
 `;
 
-const AppBarContent = styled.div`
+const AppBarGroup = styled.div`
     display: flex;
     align-items: center;
     gap: 16px;
@@ -31,7 +31,7 @@ const Settings = styled.a``;
 export {
     AppBarContainer,
     AppBarItems,
-    AppBarContent,
+    AppBarGroup,
     Email,
     Notifications,
     Settings,
