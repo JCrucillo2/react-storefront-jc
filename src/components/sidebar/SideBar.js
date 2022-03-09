@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { SidebarContainer, Logo, SidebarItems, SidebarItem } from "./styles";
+import { SidebarContainer, SidebarItems, SidebarItem } from "./styles";
 import * as AiIcons from "react-icons/ai";
 import * as HiIcons from "react-icons/hi";
 import { IconContext } from "react-icons/lib";
@@ -11,7 +11,6 @@ function SideBar() {
         <>
             <IconContext.Provider value={{ size: "25" }}>
                 <SidebarContainer>
-                    <Logo>JCFigures</Logo>
                     <SidebarItems>
                         <SidebarItem>
                             <Link to="#">

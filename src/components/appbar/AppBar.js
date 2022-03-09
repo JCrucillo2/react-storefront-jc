@@ -8,6 +8,7 @@ import {
     Email,
     Notifications,
     Settings,
+    Logo,
 } from "./styles";
 
 // react icons
@@ -27,6 +28,7 @@ function AppBar(props) {
             <IconContext.Provider value={{ size: "25", color: "#ff7b00" }}>
                 <AppBarContainer>
                     <AppBarItems>
+                        <Logo>JCFigures</Logo>
                         <AppBarGroup>
                             <Button padding="0.5rem" onClick={onLogoutRequest}>
                                 Sign Out

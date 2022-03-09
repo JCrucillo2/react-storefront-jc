@@ -1,21 +1,9 @@
 import styled from "styled-components";
-import { themeColor, lightColor, darkColor } from "../../styles/theme";
+import { themeColor, lightColor, darkColor } from "styles/theme";
 
 const SidebarContainer = styled.div`
-    width: 260px;
+    width: 289px;
     background-color: ${themeColor};
-`;
-
-const Logo = styled.h1`
-    padding: 1rem;
-    font-size: 1.525rem;
-    height: 60px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-    font-family: "Leckerli One", cursive;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: ${lightColor};
 `;
 
 const SidebarItems = styled.ul`
@@ -44,4 +32,4 @@ const SidebarItem = styled.li`
     }
 `;
 
-export { SidebarContainer, Logo, SidebarItems, SidebarItem };
+export { SidebarContainer, SidebarItems, SidebarItem };
